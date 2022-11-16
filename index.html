@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+  <script src="index.js"></script>
+</head>
+
+<style>
+    *{
+        padding: 0;
+       margin: 0;
+       overflow: hidden;
+    }
+    .m{
+        background: url(images/background.jpg) no-repeat;
+        position: relative;
+       
+        
+    }
+    
+
+
+
+    .player {
+        position: relative;
+        color: #FFD600;
+        font-family: 'Chilanka', cursive;
+        text-align: center;
+        margin-top: 250px;
+    }
+    .btn {
+        position: relative;
+        margin-right: 20px;
+        font-size: 30px;
+        width: 60px;
+        height: 40px;
+        border: 2px solid grey;
+        border-radius: 10%;
+        margin-left: 50px;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+
+    .choose {
+        position: relative;
+        margin-top: 60px;
+    }
+
+    span {
+        position: relative;
+        color: #FFD600;
+        font-family: 'Chilanka', cursive;
+        position: relative;
+    }
+
+    span::before {
+        content: attr(attribute);
+        color: white;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        overflow: hidden;
+    }
+
+    .h {
+        position: relative;
+        color: white;
+    }
+    .alert{
+        position: relative;
+        color: white;
+        font-size: 30px;
+        margin-top: 30px;
+        margin-left: 470px;
+        
+    }
+    .play{
+        position: relative;
+        margin-left: 600px;
+        margin-top: 30px;
+        height: 50px;
+        width: 90px;
+        border: 3px solid red;
+        border-right:2px solid orange ;
+        border-left:2px solid orange ;
+        border-radius: 40%;
+        background-color: black;
+        font-size: large;
+        color: white;
+        cursor: pointer;
+    }
+    .head{
+         padding-left: 20px;
+         padding-right: 20px;
+        font-size: 70px;
+        position: absolute;
+       
+
+        text-shadow: 2px 2px rgb(225, 192, 198);
+        background-image: linear-gradient(yellow,white);
+        border-radius: 10%;
+        margin-top:-150px ;
+        margin-left: 420px;
+
+        font-family: Arial,
+            Helvetica, sans-serif;
+        background: linear-gradient(to right, #f32170, #ff6b08,
+                #cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+    @media (max-width:400px){
+       .head {
+            margin-left: 60px;
+           font-size: 2rem;
+        }
+        .play{
+            margin-left: 150px;
+        }
+        .m{
+            height: -100px;
+        }
+        
+    }
+    
+    
+   
+</style>
+
+<body class="m">
+   
+    <div class="player">
+        <div class="head"> TIC TAC TOE</div>
+ 
+        <h1 class="player1">pla<span attribute="y">y</span><span attribute="e">e</span><span class="h">r<span class="num"> 1</span></span> </h1>
+        <h1 class="choose">Choose your Sy<span attribute="m">m</span><span class="h">bol</span></h1>
+        <div class="btns">
+            <button class="btn" onclick="get('+')">+</button>
+            <button class="btn" onclick="get('-')">-</button>
+            <button class="btn" onclick="get('X')">X</button>
+            <button class="btn" onclick="get('O')">O</button>
+        </div>
+   
+    </div>
+<button class="play" onclick="play()">Play</button>
+<div class="alert"></div>
+</body>
+
+</html>

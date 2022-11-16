@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <script src="2.js"></script>
+</head>
+
+<style>
+   *{
+    padding: 0;
+        margin: 0;
+        overflow: hidden;
+   }
+
+
+    .m {
+        background: linear-gradient(rgba(22, 21, 21, 0.7), rgba(7, 6, 6, 0.7)), url("images/background3.jpg");
+        height: 100vh;
+        width: 100%;
+    
+      
+    }
+
+.main{
+    margin-top: 140px;
+   
+    margin-left: 450px;
+
+}
+
+
+    .a {
+        display: flex;
+        
+     
+}
+
+    .main {
+        margin-bottom: 100px;
+
+
+
+    }
+
+    .box{
+
+        width: 7.5rem;
+        height: 7.5rem;
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(246, 157, 172), rgb(246, 53, 85)) 1;
+   
+    }
+
+  
+
+    .box1 {
+        border-top: none;
+
+    }
+
+    .box3 {
+        border-bottom: none;
+    }
+
+
+   
+
+    .box-1 {
+        border-bottom: none;
+        border-left: none;
+        
+    }
+
+
+
+    .btn {
+        height: inherit;
+        width: inherit;
+        border: none;
+        background: none;
+
+
+        font-size: 100px;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+
+        position: absolute;
+
+        font-family: Arial,
+            Helvetica, sans-serif;
+        background: linear-gradient(to right, #f32170, #ff6b08,
+                #cf23cf, #eedd44);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        text-shadow: 2px 2px rgb(225, 192, 198);
+    }
+
+    .top1 {
+        border-width: 4px;
+        border-style: solid;
+        border-image: linear-gradient(to right, rgb(246, 157, 172), rgb(246, 53, 85)) 1;
+        position: relative;
+    }
+
+    .top {
+        border-top: none;
+        border-left: none;
+
+    }
+
+    .right {
+        border-right: none;
+    }
+
+    .left {
+        border-left: none;
+    }
+
+    .blur {
+        filter: blur(5px);
+    }
+
+    .winner {
+        color: white;
+        background-image: linear-gradient(grey,violet);
+        opacity: 0.8;
+        font-size: 50px;
+        margin-left: 430px;
+        position:absolute;
+    }
+    .reset{
+        position: absolute;
+       margin-left: 540px;
+       height: 30px;
+       width: 70px;
+       color:white ;
+       background-color:grey;
+       border-image:   linear-gradient(white,rgb(136, 255, 0)) ;
+       border-width: 4px;
+       
+    }
+    .go{
+        position: absolute;
+        width: 90px;
+       margin-left: 670px;
+       height: 30px;
+       color:white ;
+       background-color:grey;
+       border-image:   linear-gradient(white,rgb(136, 255, 0)) ;
+       border-width: 4px;
+      
+    }
+
+    
+   
+   
+    @media (max-width:400px){
+        *{
+            overflow: hidden;
+        }
+        .box{
+            width: 60px;
+            height: 60px;
+            border-width: 4px;
+        }
+        .m{
+            margin-top: 200px;
+            margin-left: 40px;
+        }
+        .main{
+            overflow: hidden;
+          
+          margin-top: 10px;
+   
+   margin-left: 40px;
+        }
+        .reset{
+            margin-left: 40px;
+        }
+        .go{
+            margin-left: 160px;
+        }
+        .btn{
+            font-size: 60px;
+        }
+        .winner{
+            font-size: 30px;
+            margin-left: 15px;
+            margin-top: -170px;
+
+        }
+     
+      
+}
+</style>
+
+<body class="m">
+    <div class="k">
+    <label for=""><div class="winner draw"></div></label>
+    <div class="main">
+
+
+
+        <div class="a">
+            <div class="box1 box top1 top "><button class=" btn btn1 " onclick="enter(1)"></button></div>
+            <div class="box1 box"><button class="btn btn2 " onclick="enter(2)"></button></div>
+            <div class="box1 box right"><button class="btn btn3" onclick="enter(3)"></button></div>
+        </div>
+        <div class="a">
+            <div class="box2 box left"><button class="btn btn4 " onclick="enter(4)"></button></div>
+            <div class="box2 box"><button class="btn btn5 " onclick="enter(5)"></button></div>
+            <div class="box2 box right"><button class="btn btn6 " onclick="enter(6)"></button></div>
+        </div>
+        <div class="a">
+            <div class="box3 box left"><button class="btn btn7 " onclick="enter(7)"></button></div>
+            <div class="box3 box"><button class="btn btn8 " onclick="enter(8)"></button></div>
+            <div class="box3 box right"><button class="btn btn9" onclick="enter(9)"></button></div>
+        </div>
+    </div>
+    <button class="reset" onclick="window.location.reload()">Reset</button>
+    <button class="go" onclick="window.location.href='index.html'">Go back</button>
+    
+</div>
+
+
+</body>
+
+</html>
