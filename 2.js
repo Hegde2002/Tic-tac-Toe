@@ -345,7 +345,7 @@ function enter(v) {
     }
     if(k==9 && w==0){
        
-        document.querySelector(".winner").innerHTML="The game ended in draw"; 
+        document.querySelector(".winner").innerHTML="The game ended in a draw"; 
         
        
 
